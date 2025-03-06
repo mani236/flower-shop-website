@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decorations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.4s ease, opacity 0.4s;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 0 0 12px 12px;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #2E7D32, #1B5E20);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h2>Home Decorations</h2>
+        <a href="index.html" class="back-button">Back to Gallery</a>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="home1.jpg" alt="Home Decoration">
+                <div class="description">Elegant Living Room Decor</div>
+            </div>
+            <div class="gallery-item">
+                <img src="home2.jpg" alt="Home Decoration">
+                <div class="description">Festive Home Entrance Setup</div>
+            </div>
+            <div class="gallery-item">
+                <img src="home3.jpg" alt="Home Decoration">
+                <div class="description">Indoor Floral Arrangement</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
